@@ -1,0 +1,21 @@
+{
+  "name": "eli-eye",
+  "productName": "Eli-Eye",
+  "version": "1.0.0",
+  "description": "A camera app with live effects, face filters and backdrops",
+  "author": "Vigitel SRL",
+  "license": "GPL-3.0-or-later",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "node scripts/fetch-models.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@mediapipe/tasks-vision": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron": "^44.5.1"
+  }
+}

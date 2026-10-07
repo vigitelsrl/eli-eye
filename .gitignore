@@ -1,0 +1,15 @@
+# Installed by `npm install`
+node_modules/
+
+# Downloaded by `npm install` (scripts/fetch-models.js)
+models/
+
+# Build output
+dist/
+out/
+
+# Logs and editor/OS clutter
+*.log
+.DS_Store
+.vscode/
+.idea/

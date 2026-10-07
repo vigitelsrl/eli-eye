@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Eli-Eye</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="titlebar">
+    <div class="lights">
+      <button class="light close" title="Close"><svg viewBox="0 0 12 12"><path d="M3.5 3.5l5 5m0-5-5 5"/></svg></button>
+      <button class="light min" title="Minimize"><svg viewBox="0 0 12 12"><path d="M2.8 6h6.4"/></svg></button>
+      <button class="light zoom" title="Enter Full Screen"><svg viewBox="0 0 12 12"><path class="fill" d="M3.3 4.4v4.3h4.3zM8.7 7.6V3.3H4.4z"/></svg></button>
+    </div>
+    <div class="title">Eli-Eye</div>
+  </header>
+
+  <main id="stage">
+    <canvas id="preview" width="1280" height="720"></canvas>
+    <div id="grid" hidden></div>
+    <img id="viewer-img" alt="" hidden>
+    <video id="viewer-video" controls playsinline hidden></video>
+    <div id="no-camera" hidden>
+      <span class="icon" data-icon="noCamera"></span>
+      <p>There is no connected camera.</p>
+    </div>
+    <div id="message" hidden></div>
+  </main>
+
+  <footer id="toolbar">
+    <div class="tb-left">
+      <div id="modes" class="segmented" role="radiogroup">
+        <button data-mode="4up" title="Take four quick pictures" data-icon="fourUp"></button>
+        <button data-mode="photo" title="Take a still picture" data-icon="single"></button>
+        <button data-mode="video" title="Record a movie clip" data-icon="video"></button>
+      </div>
+      <button id="btn-live" class="plain" title="View Video Preview" data-icon="live" hidden></button>
+    </div>
+
+    <div class="tb-center">
+      <button id="shutter" title="Take Photo">
+        <span class="glyph glyph-photo" data-icon="camera"></span>
+        <span class="glyph glyph-video" data-icon="videoGlyph"></span>
+        <span class="glyph glyph-stop" data-icon="stop"></span>
+      </button>
+      <div id="countdown" hidden>
+        <span>3</span><span>2</span><span>1</span><span class="cd-cam" data-icon="camera"></span>
+      </div>
+      <div id="rec-time" hidden>0:00</div>
+    </div>
+
+    <div class="tb-right">
+      <div class="fx-group" id="fx-group">
+        <div class="fx-row">
+          <button id="fx-prev" class="arrow" title="Previous" data-icon="left"></button>
+          <button id="btn-effects">Effects</button>
+          <button id="fx-next" class="arrow" title="Next" data-icon="right"></button>
+        </div>
+        <div id="dots"></div>
+      </div>
+      <button id="btn-share" class="plain" title="Share" data-icon="share" hidden></button>
+    </div>
+  </footer>
+
+  <nav id="strip"><div id="strip-inner"></div></nav>
+
+  <div id="flash"></div>
+
+  <div id="about" hidden>
+    <div class="about-card">
+      <img src="../assets/icon.svg" alt="">
+      <h1>Eli-Eye</h1>
+      <p class="ver">Version 1.0</p>
+      <p>A camera app with live effects and backdrops.</p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
