@@ -3,6 +3,10 @@
 A camera app for Linux with live effects, face filters and backdrops, in the
 spirit of the classic Photo Booth.
 
+Eli-Eye was built for [Omarchy](https://omarchy.org/) (Arch Linux + Hyprland),
+but it runs on any modern Linux distribution, such as Debian, Ubuntu or Fedora,
+on Wayland or X11 and any desktop environment.
+
 - **Live preview** with still, 4-up and movie modes
 - **3-2-1 countdown** with screen flash and shutter sound
 - **Five pages of effects** in a live 3×3 grid:
@@ -26,9 +30,10 @@ work without one, just slower).
 
 Photos and movies are saved to `~/Pictures/Eli-Eye Library/Pictures`.
 
-### Hyprland
+### Omarchy / Hyprland
 
-On a tiling window manager, add a rule so Eli-Eye floats at its intended size:
+On a tiling window manager, add a rule so Eli-Eye floats at its intended size.
+On Omarchy, put it in `~/.config/hypr/hyprland.lua`:
 
 ```lua
 o.window("^eli-eye$", { float = true, center = true, size = { 860, 662 } })
